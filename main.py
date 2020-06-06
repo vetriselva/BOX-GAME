@@ -122,19 +122,11 @@ def drawLine(linePoints, revealedBoxes=''):
                     count = len(MYDICT4)
                     fun(MYDICT4,(fourRect[row][0][0][0],fourRect[row][0][0][1]))
                     if (count != len(MYDICT4)):
-#                         print('match',i)
-#                         print('overall',MYDICT4)
-#                         print('player1',MYDICT1)
-#                         print('player2',MYDICT2)
-#                         print('pl1',(set(MYDICT4)&set(MYDICT1)))
-#                         print('pl2',(set(MYDICT4)&set(MYDICT2)))
                         play1 = (set(set(MYDICT4)&set(MYDICT1))&(set(set(MYDICT4)&set(MYDICT2))))
                         play2 = (set(set(MYDICT4)&set(MYDICT2))&(set(set(MYDICT4)&set(MYDICT1))))
 #                         print('player1',play1)
 #                         print('player2',play2)
                         MYDICT.append(i) 
-#                         print('iiii',MYDICT)
-#                         print('length',len(linePoints))
                 pointData= tuple(match)
                 pointx,pointy = leftTopCoordsOfBox(fourRect[row][0][0][0],fourRect[row][0][0][1])
                 pygame.draw.rect(DISPLAYSURF,(66, 135, 245),(pointx,pointy,50,50))
@@ -181,10 +173,10 @@ def coorRect(a,b):
                 ((a6,b6),(a8,b8)),((a,b),(a6,b6)),
                 ((a4,b4),(a,b)),((a8,b8),(a4,b4))
     ]
-#     rect4Rev = Reverse(rect4)
+
     return [
         rect1 ,rect2,rect3,rect4
-#         rect1Rev,rect2Rev,rect3Rev,rect4Rev
+
     ]
 
 def fun(array,i):
